@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    <!-- Snow Animation Container -->
+    <div id="snow-container"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
@@ -25,8 +28,8 @@
                     <path d="M12 28L20 12L28 28H24L20 20L16 28H12Z" fill="white" />
                     <defs>
                         <linearGradient id="gradient1" x1="0" y1="0" x2="40" y2="40">
-                            <stop offset="0%" stop-color="#667eea" />
-                            <stop offset="100%" stop-color="#764ba2" />
+                            <stop offset="0%" stop-color="#063737" />
+                            <stop offset="100%" stop-color="#808000" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -94,11 +97,16 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
+        <!-- Video Background -->
+        <div class="video-background">
+            <video autoplay muted loop playsinline poster="assets/nature.jpg">
+                <source src="https://videos.pexels.com/video-files/856973/856973-hd_1920_1080_30fps.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
         </div>
+
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title" data-en="Build Your Dream Career in Finland"
@@ -158,57 +166,65 @@
                     thriving job market</p>
             </div>
             <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon">💻</div>
+                <div class="category-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="category-overlay"></div>
                     <h3 class="category-title" data-en="Technology" data-fi="Teknologia" data-sv="Teknologi"
                         data-ar="التكنولوجيا">Technology</h3>
                     <p class="category-count">1,234 <span data-en="jobs" data-fi="työpaikkaa" data-sv="jobb"
                             data-ar="وظيفة">jobs</span></p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">⚙️</div>
+                <div class="category-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1581094794320-c91bed78b860?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="category-overlay"></div>
                     <h3 class="category-title" data-en="Engineering" data-fi="Insinöörityö" data-sv="Ingenjörsarbete"
                         data-ar="الهندسة">Engineering</h3>
                     <p class="category-count">856 <span data-en="jobs" data-fi="työpaikkaa" data-sv="jobb"
                             data-ar="وظيفة">jobs</span></p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">🏥</div>
+                <div class="category-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="category-overlay"></div>
                     <h3 class="category-title" data-en="Healthcare" data-fi="Terveydenhuolto" data-sv="Hälsovård"
                         data-ar="الرعاية الصحية">Healthcare</h3>
                     <p class="category-count">643 <span data-en="jobs" data-fi="työpaikkaa" data-sv="jobb"
                             data-ar="وظيفة">jobs</span></p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">📊</div>
+                <div class="category-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="category-overlay"></div>
                     <h3 class="category-title" data-en="Finance" data-fi="Rahoitus" data-sv="Finans" data-ar="المالية">
                         Finance</h3>
                     <p class="category-count">421 <span data-en="jobs" data-fi="työpaikkaa" data-sv="jobb"
                             data-ar="وظيفة">jobs</span></p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">📢</div>
+                <div class="category-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop');">
+                    <div class="category-overlay"></div>
                     <h3 class="category-title" data-en="Sales & Marketing" data-fi="Myynti ja markkinointi"
                         data-sv="Försäljning och marknadsföring" data-ar="المبيعات والتسويق">Sales & Marketing</h3>
                     <p class="category-count">512 <span data-en="jobs" data-fi="työpaikkaa" data-sv="jobb"
                             data-ar="وظيفة">jobs</span></p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">🎓</div>
+                <div class="category-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="category-overlay"></div>
                     <h3 class="category-title" data-en="Academics" data-fi="Akateemiset" data-sv="Akademiker"
                         data-ar="الأكاديميون">Academics</h3>
                     <p class="category-count">298 <span data-en="jobs" data-fi="työpaikkaa" data-sv="jobb"
                             data-ar="وظيفة">jobs</span></p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">🎮</div>
+                <div class="category-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="category-overlay"></div>
                     <h3 class="category-title" data-en="Gaming" data-fi="Peliteollisuus" data-sv="Spelindustri"
                         data-ar="الألعاب">Gaming</h3>
                     <p class="category-count">187 <span data-en="jobs" data-fi="työpaikkaa" data-sv="jobb"
                             data-ar="وظيفة">jobs</span></p>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">👥</div>
+                <div class="category-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1521791136064-79858cfd7cdc?q=80&w=2069&auto=format&fit=crop');">
+                    <div class="category-overlay"></div>
                     <h3 class="category-title" data-en="Human Resources" data-fi="Henkilöstöhallinto"
                         data-sv="Personalresurser" data-ar="الموارد البشرية">Human Resources</h3>
                     <p class="category-count">234 <span data-en="jobs" data-fi="työpaikkaa" data-sv="jobb"

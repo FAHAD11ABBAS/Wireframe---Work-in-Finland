@@ -3,7 +3,15 @@
 // ===================================
 const translations = {
     en: {
-        direction: 'ltr'
+        direction: 'ltr',
+        nav: ['Home', 'Open Jobs', 'Why Finland?', 'Get Started', 'Events'],
+        hero: {
+            title: 'Build Your Dream Career in Finland',
+            subtitle: "The world's happiest country is a great place to work and live",
+            cta1: 'See Open Jobs',
+            cta2: 'Get Started',
+            stats: ['World\'s Happiest Country', 'Most Innovative Countries', 'Most Stable Society']
+        }
     },
     fi: {
         direction: 'ltr'
@@ -17,6 +25,59 @@ const translations = {
 };
 
 let currentLang = localStorage.getItem('language') || 'en';
+
+/* ===================================
+   SNOW ANIMATION LOGIC
+   =================================== */
+function createSnow() {
+    const snowContainer = document.getElementById('snow-container');
+    if (!snowContainer) return; // Ensure container exists
+
+    const snowflakeCount = 50; // Number of snowflakes
+
+    for (let i = 0; i < snowflakeCount; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+
+        // Random positioning and sizing
+        const xPos = Math.random() * 100;
+        const delay = Math.random() * 5;
+        const duration = 5 + Math.random() * 10;
+        const size = Math.random() * 5 + 2;
+
+        snowflake.style.left = `${xPos}% `;
+        snowflake.style.animationDelay = `${delay} s`;
+        snowflake.style.animationDuration = `${duration} s`;
+        snowflake.style.width = `${size} px`;
+        snowflake.style.height = `${size} px`;
+
+        snowContainer.appendChild(snowflake);
+    }
+}
+
+/* ===================================
+   PARALLAX EFFECT
+   =================================== */
+function enableParallax() {
+    document.addEventListener('mousemove', (e) => {
+        const moveX = (e.clientX * -0.01);
+        const moveY = (e.clientY * -0.01);
+
+        // Apply to orbs for subtle background movement
+        const orbs = document.querySelectorAll('.gradient-orb');
+        orbs.forEach(orb => {
+            orb.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    });
+}
+
+// Initialize animations on load
+document.addEventListener('DOMContentLoaded', () => {
+    createSnow();
+    enableParallax();
+    // Existing init code: Set initial language
+    setLanguage(currentLang);
+});
 
 function setLanguage(lang) {
     currentLang = lang;
@@ -207,16 +268,16 @@ categoryCards.forEach(card => {
 // Add ripple animation
 const style = document.createElement('style');
 style.textContent = `
-    @keyframes ripple {
+@keyframes ripple {
         from {
-            transform: scale(0);
-            opacity: 1;
-        }
-        to {
-            transform: scale(20);
-            opacity: 0;
-        }
+        transform: scale(0);
+        opacity: 1;
     }
+        to {
+        transform: scale(20);
+        opacity: 0;
+    }
+}
 `;
 document.head.appendChild(style);
 
@@ -315,11 +376,11 @@ if (subscribeBtn) {
 // Shake animation
 const shakeStyle = document.createElement('style');
 shakeStyle.textContent = `
-    @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-10px); }
-        75% { transform: translateX(10px); }
-    }
+@keyframes shake {
+    0 %, 100 % { transform: translateX(0); }
+    25 % { transform: translateX(-10px); }
+    75 % { transform: translateX(10px); }
+}
 `;
 document.head.appendChild(shakeStyle);
 
@@ -378,25 +439,25 @@ document.querySelectorAll('.btn').forEach(button => {
 const rippleStyle = document.createElement('style');
 rippleStyle.textContent = `
     .btn {
-        position: relative;
-        overflow: hidden;
-    }
+    position: relative;
+    overflow: hidden;
+}
     
-    .ripple-effect {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.5);
-        transform: scale(0);
-        animation: ripple-animation 0.6s ease-out;
-        pointer-events: none;
-    }
-    
-    @keyframes ripple-animation {
+    .ripple - effect {
+    position: absolute;
+    border - radius: 50 %;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    animation: ripple - animation 0.6s ease - out;
+    pointer - events: none;
+}
+
+@keyframes ripple - animation {
         to {
-            transform: scale(4);
-            opacity: 0;
-        }
+        transform: scale(4);
+        opacity: 0;
     }
+}
 `;
 document.head.appendChild(rippleStyle);
 
@@ -462,11 +523,11 @@ document.querySelectorAll('.category-card, .benefit-card, .step-card, .event-car
 // Focus visible for better keyboard navigation
 const focusStyle = document.createElement('style');
 focusStyle.textContent = `
-    *:focus-visible {
-        outline: 2px solid var(--primary-color);
-        outline-offset: 4px;
-        border-radius: var(--radius-sm);
-    }
+    *: focus - visible {
+    outline: 2px solid var(--primary - color);
+    outline - offset: 4px;
+    border - radius: var(--radius - sm);
+}
 `;
 document.head.appendChild(focusStyle);
 
@@ -489,7 +550,7 @@ window.addEventListener('load', () => {
 
     // Log page load time
     const loadTime = performance.now();
-    console.log(`Page loaded in ${Math.round(loadTime)}ms`);
+    console.log(`Page loaded in ${Math.round(loadTime)} ms`);
 });
 
 // ===================================
