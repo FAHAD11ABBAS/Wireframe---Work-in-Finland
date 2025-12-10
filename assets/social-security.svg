@@ -1,0 +1,84 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="socialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#063737;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#faf8f6"/>
+  
+  <!-- Shield (Protection) -->
+  <g class="shield">
+    <path d="M 400,100 L 300,150 L 300,350 C 300,450 400,500 400,500 C 400,500 500,450 500,350 L 500,150 Z" fill="url(#socialGrad)" opacity="0.8">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Cross Symbol (Healthcare) -->
+    <rect x="380" y="250" width="40" height="120" fill="#EBC9CF" rx="5"/>
+    <rect x="340" y="290" width="120" height="40" fill="#EBC9CF" rx="5"/>
+  </g>
+  
+  <!-- Heart Beat Line -->
+  <g class="heartbeat">
+    <path d="M 100,450 L 200,450 L 230,400 L 260,500 L 290,450 L 700,450" fill="none" stroke="#A25524" stroke-width="4" stroke-linecap="round">
+      <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Medical Icons -->
+  <g class="pill1" transform="translate(150, 200)">
+    <rect x="-30" y="-15" width="60" height="30" fill="#063737" rx="15">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-30" y="-15" width="30" height="30" fill="#A25524" rx="15"/>
+  </g>
+  
+  <g class="pill2" transform="translate(650, 250)">
+    <rect x="-25" y="-12" width="50" height="24" fill="#808000" rx="12">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="10s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-25" y="-12" width="25" height="24" fill="#EBC9CF" rx="12"/>
+  </g>
+  
+  <!-- People Icons (Community) -->
+  <g class="person1" transform="translate(200, 550)">
+    <circle cx="0" cy="-30" r="20" fill="#063737"/>
+    <path d="M -25,-10 L -25,20 L 25,20 L 25,-10 Z" fill="#063737" opacity="0.8"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </g>
+  
+  <g class="person2" transform="translate(400, 550)">
+    <circle cx="0" cy="-30" r="20" fill="#A25524"/>
+    <path d="M -25,-10 L -25,20 L 25,20 L 25,-10 Z" fill="#A25524" opacity="0.8"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </g>
+  
+  <g class="person3" transform="translate(600, 550)">
+    <circle cx="0" cy="-30" r="20" fill="#808000"/>
+    <path d="M -25,-10 L -25,20 L 25,20 L 25,-10 Z" fill="#808000" opacity="0.8"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Connecting Lines (Social Network) -->
+  <line x1="200" y1="520" x2="400" y2="520" stroke="#EBC9CF" stroke-width="2" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="400" y1="520" x2="600" y2="520" stroke="#EBC9CF" stroke-width="2" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Plus Signs (Benefits) -->
+  <g class="plus1">
+    <line x1="100" y1="100" x2="100" y2="140" stroke="#A25524" stroke-width="4" stroke-linecap="round"/>
+    <line x1="80" y1="120" x2="120" y2="120" stroke="#A25524" stroke-width="4" stroke-linecap="round"/>
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+  </g>
+  
+  <g class="plus2">
+    <line x1="700" y1="120" x2="700" y2="160" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+    <line x1="680" y1="140" x2="720" y2="140" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+  </g>
+</svg>

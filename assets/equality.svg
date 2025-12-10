@@ -1,0 +1,112 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="equalityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#063737;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#faf8f6"/>
+  
+  <!-- Diverse People Circle -->
+  <g class="circle-people">
+    <!-- Person 1 -->
+    <g transform="translate(400, 200) rotate(0)">
+      <g transform="translate(0, -150)">
+        <circle cx="0" cy="0" r="30" fill="#063737">
+          <animate attributeName="r" values="30;35;30" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M -35,30 L -35,80 L 35,80 L 35,30 Z" fill="#063737" opacity="0.8"/>
+      </g>
+    </g>
+    
+    <!-- Person 2 -->
+    <g transform="translate(400, 200) rotate(72)">
+      <g transform="translate(0, -150)">
+        <circle cx="0" cy="0" r="30" fill="#A25524">
+          <animate attributeName="r" values="30;35;30" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M -35,30 L -35,80 L 35,80 L 35,30 Z" fill="#A25524" opacity="0.8"/>
+      </g>
+    </g>
+    
+    <!-- Person 3 -->
+    <g transform="translate(400, 200) rotate(144)">
+      <g transform="translate(0, -150)">
+        <circle cx="0" cy="0" r="30" fill="#808000">
+          <animate attributeName="r" values="30;35;30" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M -35,30 L -35,80 L 35,80 L 35,30 Z" fill="#808000" opacity="0.8"/>
+      </g>
+    </g>
+    
+    <!-- Person 4 -->
+    <g transform="translate(400, 200) rotate(216)">
+      <g transform="translate(0, -150)">
+        <circle cx="0" cy="0" r="30" fill="#EBC9CF">
+          <animate attributeName="r" values="30;35;30" dur="3s" begin="1.8s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M -35,30 L -35,80 L 35,80 L 35,30 Z" fill="#EBC9CF" opacity="0.8"/>
+      </g>
+    </g>
+    
+    <!-- Person 5 -->
+    <g transform="translate(400, 200) rotate(288)">
+      <g transform="translate(0, -150)">
+        <circle cx="0" cy="0" r="30" fill="#A25524">
+          <animate attributeName="r" values="30;35;30" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M -35,30 L -35,80 L 35,80 L 35,30 Z" fill="#A25524" opacity="0.8"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Center Heart -->
+  <g transform="translate(400, 200)">
+    <path d="M 0,-20 C 0,-30 -10,-35 -15,-35 C -20,-35 -25,-32 -25,-25 C -25,-32 -30,-35 -35,-35 C -40,-35 -50,-30 -50,-20 C -50,-5 -25,10 -25,10 C -25,10 0,-5 0,-20 Z" fill="url(#equalityGrad)" transform="translate(25, 0) scale(1.5)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Connecting Lines -->
+  <g class="connections" opacity="0.3">
+    <line x1="400" y1="50" x2="550" y2="200" stroke="#EBC9CF" stroke-width="2">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="550" y1="200" x2="450" y2="380" stroke="#EBC9CF" stroke-width="2">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+    </line>
+    <line x1="450" y1="380" x2="250" y2="380" stroke="#EBC9CF" stroke-width="2">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="250" y1="380" x2="250" y2="200" stroke="#EBC9CF" stroke-width="2">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1.8s" repeatCount="indefinite"/>
+    </line>
+    <line x1="250" y1="200" x2="400" y2="50" stroke="#EBC9CF" stroke-width="2">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Hands Holding -->
+  <g class="hands" transform="translate(400, 500)">
+    <path d="M -100,0 Q -80,-20 -60,0 L -40,20 L -60,40 Q -80,20 -100,0 Z" fill="#063737" opacity="0.8"/>
+    <path d="M 100,0 Q 80,-20 60,0 L 40,20 L 60,40 Q 80,20 100,0 Z" fill="#A25524" opacity="0.8"/>
+    <circle cx="0" cy="20" r="30" fill="url(#equalityGrad)" opacity="0.7">
+      <animate attributeName="r" values="30;35;30" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Floating Stars (Diversity) -->
+  <g class="stars">
+    <polygon points="100,450 105,465 120,465 108,475 113,490 100,480 87,490 92,475 80,465 95,465" fill="#808000">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="700,100 705,115 720,115 708,125 713,140 700,130 687,140 692,125 680,115 695,115" fill="#A25524">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="650,450 655,465 670,465 658,475 663,490 650,480 637,490 642,475 630,465 645,465" fill="#EBC9CF">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+</svg>

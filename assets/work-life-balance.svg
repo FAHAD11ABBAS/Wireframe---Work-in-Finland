@@ -1,0 +1,107 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="balanceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#063737;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#faf8f6"/>
+  
+  <!-- Balance Scale -->
+  <g class="scale">
+    <!-- Base -->
+    <rect x="375" y="500" width="50" height="20" fill="#A25524" rx="5"/>
+    <rect x="390" y="300" width="20" height="200" fill="#063737"/>
+    
+    <!-- Balance Beam -->
+    <rect x="200" y="290" width="400" height="10" fill="#808000" rx="5">
+      <animateTransform attributeName="transform" type="rotate" from="-5 400 295" to="5 400 295" dur="4s" repeatCount="indefinite" direction="alternate"/>
+    </rect>
+    
+    <!-- Left Pan (Work) -->
+    <g class="left-pan">
+      <line x1="250" y1="295" x2="250" y2="350" stroke="#063737" stroke-width="3"/>
+      <ellipse cx="250" cy="370" rx="80" ry="20" fill="url(#balanceGrad)" opacity="0.8"/>
+      
+      <!-- Laptop Icon -->
+      <rect x="220" y="340" width="60" height="40" fill="#063737" rx="3"/>
+      <rect x="225" y="345" width="50" height="30" fill="#EBC9CF" rx="2"/>
+    </g>
+    
+    <!-- Right Pan (Life) -->
+    <g class="right-pan">
+      <line x1="550" y1="295" x2="550" y2="350" stroke="#063737" stroke-width="3"/>
+      <ellipse cx="550" cy="370" rx="80" ry="20" fill="url(#balanceGrad)" opacity="0.8"/>
+      
+      <!-- Heart Icon -->
+      <path d="M 550,340 C 550,330 540,325 535,325 C 530,325 525,328 525,335 C 525,328 520,325 515,325 C 510,325 500,330 500,340 C 500,355 525,370 525,370 C 525,370 550,355 550,340 Z" fill="#A25524" transform="translate(25, 0)">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+  
+  <!-- Clock (Time Management) -->
+  <g class="clock" transform="translate(150, 150)">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#063737" stroke-width="4"/>
+    <circle cx="0" cy="0" r="55" fill="#EBC9CF" opacity="0.3"/>
+    
+    <!-- Hour Hand -->
+    <line x1="0" y1="0" x2="0" y2="-30" stroke="#A25524" stroke-width="4" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="12s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Minute Hand -->
+    <line x1="0" y1="0" x2="0" y2="-45" stroke="#808000" stroke-width="3" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="6s" repeatCount="indefinite"/>
+    </line>
+    
+    <circle cx="0" cy="0" r="5" fill="#063737"/>
+  </g>
+  
+  <!-- Calendar -->
+  <g class="calendar" transform="translate(600, 150)">
+    <rect x="-50" y="-60" width="100" height="120" fill="#063737" rx="5"/>
+    <rect x="-45" y="-50" width="90" height="100" fill="#fff" rx="3"/>
+    
+    <!-- Calendar Grid -->
+    <rect x="-35" y="-35" width="15" height="15" fill="#EBC9CF"/>
+    <rect x="-15" y="-35" width="15" height="15" fill="#EBC9CF"/>
+    <rect x="5" y="-35" width="15" height="15" fill="#EBC9CF"/>
+    <rect x="25" y="-35" width="15" height="15" fill="#A25524">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <rect x="-35" y="-15" width="15" height="15" fill="#EBC9CF"/>
+    <rect x="-15" y="-15" width="15" height="15" fill="#EBC9CF"/>
+    <rect x="5" y="-15" width="15" height="15" fill="#EBC9CF"/>
+    <rect x="25" y="-15" width="15" height="15" fill="#EBC9CF"/>
+  </g>
+  
+  <!-- Floating Elements -->
+  <circle cx="100" cy="400" r="15" fill="#808000" opacity="0.5">
+    <animate attributeName="cy" values="400;380;400" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="450" r="20" fill="#A25524" opacity="0.5">
+    <animate attributeName="cy" values="450;430;450" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Sun (Vacation) -->
+  <g class="sun" transform="translate(650, 400)">
+    <circle cx="0" cy="0" r="40" fill="#808000" opacity="0.7">
+      <animate attributeName="r" values="40;45;40" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <g class="rays">
+      <line x1="0" y1="-60" x2="0" y2="-80" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+      <line x1="42" y1="-42" x2="56" y2="-56" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="0" x2="80" y2="0" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+      <line x1="42" y1="42" x2="56" y2="56" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+      <line x1="0" y1="60" x2="0" y2="80" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-42" y1="42" x2="-56" y2="56" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-60" y1="0" x2="-80" y2="0" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-42" y1="-42" x2="-56" y2="-56" stroke="#808000" stroke-width="4" stroke-linecap="round"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="20s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>
